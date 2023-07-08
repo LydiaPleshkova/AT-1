@@ -24,4 +24,14 @@ public class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @org.junit.Test
+    public void testRemainIfZero() {
+        CashbackHackService service = new CashbackHackService();
+        int amount = 0;
+        int actual = service.remain(amount);
+        int expected = 1000;
+
+        assertEquals(expected, actual);
+    }
 }
